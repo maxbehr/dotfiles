@@ -1,5 +1,9 @@
 " Credits for some stuff: http://amix.dk/vim/vimrc.html
 
+" Font
+set gfn=Monaco:h14
+" set gfn=* -> pop up font window
+
 " Set colorscheme to desert
 colorscheme desert
 
