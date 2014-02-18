@@ -4,6 +4,9 @@
 set gfn=Monaco:h14
 " set gfn=* -> pop up font window
 
+" Show line numbers
+set number
+
 " Set colorscheme to desert
 colorscheme desert
 
