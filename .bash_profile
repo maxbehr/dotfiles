@@ -4,6 +4,7 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 # General
 alias j='java'
 alias l='ls -lh'
+alias la='ls -lah'
 
 # Navigation
 alias app='cd ~/Applications'
@@ -12,6 +13,9 @@ alias dev='cd ~/Developer/'
 alias doc='cd ~/Documents/'
 alias dropbox='cd ~/Dropbox/'
 alias workspace='cd ~/Developer/workspace/'
+
+# Editing
+alias s='open -a "Sublime Text 2"'
 
 # Git
 alias gst='git status'
