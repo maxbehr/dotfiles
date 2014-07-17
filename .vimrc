@@ -30,6 +30,13 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+" Navigate easier through wrapped lines
+nnoremap j gj
+nnoremap k gk
+
+" Increase history
+set history=9999
+
 " Always show the status line
 set laststatus=2
 " Format the status line
@@ -44,6 +51,21 @@ filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Remove trailing whitespace
+" http://vim.wikia.com/wiki/Remove_unwanted_spaces
+function! StripTrailingWhitespace()
+    if !&binary && &filetype != 'diff'
+        normal mz
+        normal Hmy
+        %s/\s\+$//e
+        normal 'yz<cr>
+        normal `z
+        retab
+    endif
+endfunction
+
+
 " Returns true if paste mode is enabled
 function! HasPaste()
     if &paste
