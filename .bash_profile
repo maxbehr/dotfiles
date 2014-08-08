@@ -23,6 +23,7 @@ alias pull='git pull'
 alias push='git push'
 alias gbr='git branch'
 alias master='git checkout master'
+alias gg='git grep'
 
 # cd helper
 # dirty hack since you cannot define a function called '..' [credits to my last internship for this one]
