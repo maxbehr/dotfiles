@@ -16,8 +16,11 @@ set expandtab
 set shiftwidth=4    " Control how many columns text is indented with the reindent operations (<< and >>) and automatic C-style indentation
 set tabstop=4       " Tell vim how many columns a tab counts for
 " Show lost whitespaces
-set list
+" set list
+" How to show lost whitespaces?
 set listchars=tab:>=,trail:~,extends:>,precedes:<,nbsp:.
+" Do not show lost whitespaces
+set nolist
 
 " Highlight search results
 set hlsearch
