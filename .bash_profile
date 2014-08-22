@@ -14,6 +14,8 @@ alias doc='cd ~/Documents/'
 alias dropbox='cd ~/Dropbox/'
 alias workspace='cd ~/Developer/workspace/'
 
+alias ts='task shell'
+
 # Editing
 alias s='open -a "Sublime Text 2"'
 
