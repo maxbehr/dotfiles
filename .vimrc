@@ -50,6 +50,8 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+" Set starting directory for ctrlp
+let g:ctrlp_working_path_mode = 'ra'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
@@ -77,3 +79,8 @@ function! HasPaste()
     return ''
 endfunction
 
+filetype plugin indent on
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
