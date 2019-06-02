@@ -79,6 +79,9 @@ function! HasPaste()
     return ''
 endfunction
 
+" Enable syntax highlighting for .md files
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+
 filetype plugin indent on
 set expandtab
 set tabstop=2
