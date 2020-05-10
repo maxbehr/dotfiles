@@ -25,6 +25,12 @@
 (setq helm-buffers-fuzzy-matching t
       helm-recentf-fuzzy-match    t)
 
+;; Add time tag to closed TODOs
+(setq org-log-done 'time)
+
+(use-package org-bullets
+  :config
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 ;; Load evil mode for all buffers
 ;; (require 'evil)
