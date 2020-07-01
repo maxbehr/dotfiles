@@ -41,3 +41,40 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;;
+;; Log changes in a drawer, not the content of the note.
+;;
+(setq org-log-into-drawer t)
+
+;;
+;; Log a note when todo is done
+;;
+(setq org-log-done 'note)
+
+;;
+;; Define TODO states
+;;
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "|" "DONE(d!)" "HOLD(@)" "DELEGATED(@)")
+        (sequence "CR(c)" "|" "REVIEWED(!@)")
+        (sequence "MEETING(m)" "|" "FINISHED(@)" "CANCELLED(@)" "RESCHEDULED(@)" )
+	(sequence "CALL(p)" "|" "CALLED(@)" )
+	(sequence "TELL" "|" "TOLD(@)")))
+
+(setq org-todo-keyword-faces
+  '(("TODO" . org-warning)
+
+    ("CR" . "yellow")
+    ("REVIEWED" . "yellow")
+
+    ("MEETING" . "orange")
+    ("FINISHED" . "orange")
+    ("CANCELLED" . "orange")
+    ("RESCHEDULED" . "orange")
+    
+    ("CALL" . "green")
+    ("CALLED" . "green")
+
+    ("TELL" . "green")
+    ("TOLD" . "green")))
