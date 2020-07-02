@@ -25,12 +25,12 @@
 (setq helm-buffers-fuzzy-matching t
       helm-recentf-fuzzy-match    t)
 
-;; Add time tag to closed TODOs
-(setq org-log-done 'time)
+;;
+;; UTF-8 bullets
+;;
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
-(use-package org-bullets
-  :config
-  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 ;; Load evil mode for all buffers
 ;; (require 'evil)
@@ -47,6 +47,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;;
+;; Indentation
+;;
+(setq org-startup-indented t)
 
 ;;
 ;; Log changes in a drawer, not the content of the note.
@@ -71,16 +76,12 @@
 (setq org-todo-keyword-faces
   '(("TODO" . org-warning)
 
-    ("CR" . "yellow")
-    ("REVIEWED" . "yellow")
+    ("CR" . "#FFF9AA")
 
-    ("MEETING" . "orange")
-    ("FINISHED" . "orange")
-    ("CANCELLED" . "orange")
-    ("RESCHEDULED" . "orange")
+    ("MEETING" . "#9DBAD5")
+    ("CANCELLED" . "#EBEBEB")
+    ("RESCHEDULED" . "#9DBAD5")
     
-    ("CALL" . "green")
-    ("CALLED" . "green")
+    ("CALL" . "#D291BC")
 
-    ("TELL" . "green")
-    ("TOLD" . "green")))
+    ("TELL" . "#B7C68B")))
