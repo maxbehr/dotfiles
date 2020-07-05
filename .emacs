@@ -1,3 +1,7 @@
+
+(add-to-list 'load-path "~/.emacs.d/plugin/")
+
+
 (tool-bar-mode -1)
 (setq inhibit-startup-screen t)
 
