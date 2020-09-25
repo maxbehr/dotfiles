@@ -1,4 +1,3 @@
-
 (add-to-list 'load-path "~/.emacs.d/plugin/")
 
 
@@ -95,17 +94,10 @@
 (setq org-hide-emphasis-markers t)
 
 ;;
-;; Replace "-" with "dots"
-;;
-(font-lock-add-keywords 'org-mode
-                        '(("^ *\\([-]\\) "
-                           (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
-
-;;
 ;; Define TODO states
 ;;
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "|" "DONE(d!)" "HOLD(@)" "DELEGATED(@)")
+      '((sequence "TODO(t)" "|" "DONE(d@)" "HOLD(@)" "DELEGATED(@)")
         (sequence "CR(c)" "|" "REVIEWED(!@)")
         (sequence "MEETING(m)" "|" "FINISHED(@)" "CANCELLED(@)" "RESCHEDULED(@)" )
 	(sequence "CALL(p)" "|" "CALLED(@)" )
@@ -146,16 +138,16 @@
    `(org-level-7 ((t (,@headline ,@variable-tuple))))
    `(org-level-6 ((t (,@headline ,@variable-tuple))))
    `(org-level-5 ((t (,@headline ,@variable-tuple))))
-   `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.1))))
-   `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.2))))
-   `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.3))))
-   `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.4))))
+   `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.0))))
+   `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.0))))
+   `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.1))))
+   `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.2))))
    `(org-document-title ((t (,@headline ,@variable-tuple :height 2.0 :underline nil))))))
 
 (custom-theme-set-faces
  'user
  '(variable-pitch ((t (:family "ETBembo" :height 180 :weight thin))))
- '(fixed-pitch ((t ( :family "Fira Code Retina" :height 160)))))
+ '(fixed-pitch ((t ( :family "Fira Code" :height 160)))))
 
 (add-hook 'org-mode-hook 'visual-line-mode)
 
@@ -173,8 +165,6 @@
  '(org-table ((t (:inherit fixed-pitch :foreground "#83a598"))))
  '(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.8))))
  '(org-verbatim ((t (:inherit (shadow fixed-pitch))))))
-
-
 
 
 
